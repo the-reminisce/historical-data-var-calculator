@@ -28,5 +28,6 @@ When calculating the VaR of a portfolio (a group of trades) it is difficult to o
   - Maven
   - Thymeleaf
   - JUnit 5.8.1
+  - Boostrap 5
 
 ![image](https://user-images.githubusercontent.com/53870047/140805442-82c9f8ce-024f-4c01-904a-7f5ee2d3c3bb.png)
