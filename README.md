@@ -14,6 +14,9 @@ The program rounds up when calculating the VaR as it was recommended by multiple
     - Multiple lines trades with different symbols can be inputted as well.
   - Press the calculate button to see the result.
 
+#Testing
+JUnit was used for the testing and accuracy of the functions in this application. 
+
 #Methodology
 1. Take in all of the historical values of a stock and calculate the Profit & Loss(PNL's) values for that stock. This can be done by iterating through these values and finding the percent change between day n and day n+1.
 2. Sort the list of PNL's in ascending order
