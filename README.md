@@ -10,7 +10,7 @@ The program rounds up when calculating the VaR as it was recommended by multiple
   - Input a confidence level from 1-100 (common values are: 99, 97 95)
   - Input your historical data which can either be simlated or based on an actual stock.
     - Input must be formatted in the following manner: 'SYMBOL:[(COMMA SEPERATED VALUES)]' e.g. 'GOOG:[316, 316.2, 317.5, 299.34]'
-      - An exmaple input file is inside the base directory named 'sample-data.txt'
+      - An example input file is inside the base directory named 'sample-data.txt'
     - Multiple lines trades with different symbols can be inputted as well.
   - Press the calculate button to see the result.
 
