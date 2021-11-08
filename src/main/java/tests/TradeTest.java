@@ -18,12 +18,6 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by Seth on November 11/8/2021, 2021 at 12:30 PM
- *
- * @author Seth Davis <sethdavis321@gmail.com>
- * @Discord Reminisce#1707
- */
 public class TradeTest {
 
     private Trade trade;
