@@ -4,8 +4,6 @@ A small program designed to calculate the VaR(Value at Risk) of trades using his
 
 The program rounds up when calculating the VaR as it was recommended by multiple different articles.
 
-![image](https://user-images.githubusercontent.com/53870047/140805442-82c9f8ce-024f-4c01-904a-7f5ee2d3c3bb.png)
-
 #Instructions
   - Run the springboot application
   - Access the application via http://localhost:8080/
@@ -29,3 +27,5 @@ When calculating the VaR of a portfolio (a group of trades) it is difficult to o
   - Maven
   - Thymeleaf
   - JUnit 5.8.1
+
+![image](https://user-images.githubusercontent.com/53870047/140805442-82c9f8ce-024f-4c01-904a-7f5ee2d3c3bb.png)
