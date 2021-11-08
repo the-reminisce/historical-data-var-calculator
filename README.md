@@ -15,6 +15,7 @@ The program rounds up when calculating the VaR as it was recommended by multiple
   - Press the calculate button to see the result.
 
 #Testing
+
 JUnit was used for the testing and accuracy of the functions in this application. 
 
 #Methodology
