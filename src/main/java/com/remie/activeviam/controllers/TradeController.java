@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Controller
 @SessionAttributes({"title", "description"})
@@ -93,12 +94,24 @@ public class TradeController {
             if (tradeList.isEmpty()) {
                 redirect_attributes.addFlashAttribute("error", "There was an error processing data for the submitted trades.");
             } else {
-                double totalVar = 0.0;
+                List<BigDecimal> historyList = new ArrayList<>();
+                BigDecimal[] history = new BigDecimal[10000]; //
                 for (Trade trade : tradeList) {
-                    totalVar += calculateVar(trade, confidenceLevel);
+                    for (int i = 0; i < trade.getHistoricalPrices().size(); i++) {
+                        if (history[i] == null) {
+                            history[i] = trade.getHistoricalPrices().get(i);
+                        } else {
+                            history[i] = history[i].add(trade.getHistoricalPrices().get(i));
+                        }
+                    }
                 }
-                totalVar = totalVar / tradeList.size();
-                redirect_attributes.addFlashAttribute("success", "VaR: " + totalVar + "%");
+                for (BigDecimal bigDecimal : history) {
+                    if (bigDecimal != null) {
+                        historyList.add(bigDecimal);
+                    }
+                }
+                Trade trade = new Trade("ALL", historyList);
+                redirect_attributes.addFlashAttribute("success", "VaR: " + calculateVar(trade, confidenceLevel) + "%");
             }
         } catch (NumberFormatException e) {
             redirect_attributes.addFlashAttribute("error", "Invalid input for confidence level, could not calculate VaR.");
